@@ -1,0 +1,132 @@
+Random Start Value used = 2.160882
+
+Sending to IP Address: 192.168.0.7
+Package received at date - 03/05/2015 and time - 12:41:07.642
+Received IP address and port no.: /192.168.0.7 and 50000
+Counter value received = 1
+JSON Object received = 
+{"counter":1,"timestamp":{"date":"03/05/2015","time":"12:41:07.222"}}
+
+Going to sleep for 800ms now..
+
+Incrementing counter and sending new JSON
+Putting current timestamp and sending out the JSON Object: 
+{"counter":2,"timestamp":{"date":"03/05/2015","time":"12:41:08.860"}}
+Counter value sent = 2
+
+Package received at date - 03/05/2015 and time - 12:41:09.844
+Received IP address and port no.: /192.168.0.7 and 50000
+Counter value received = 3
+JSON Object received = 
+{"counter":3,"timestamp":{"date":"03/05/2015","time":"12:41:09.832"}}
+
+Going to sleep for 800ms now..
+
+Incrementing counter and sending new JSON
+Putting current timestamp and sending out the JSON Object: 
+{"counter":4,"timestamp":{"date":"03/05/2015","time":"12:41:10.645"}}
+Counter value sent = 4
+
+Package received at date - 03/05/2015 and time - 12:41:11.458
+Received IP address and port no.: /192.168.0.7 and 50000
+Counter value received = 5
+JSON Object received = 
+{"counter":5,"timestamp":{"date":"03/05/2015","time":"12:41:11.447"}}
+
+Going to sleep for 800ms now..
+
+Incrementing counter and sending new JSON
+Putting current timestamp and sending out the JSON Object: 
+{"counter":6,"timestamp":{"date":"03/05/2015","time":"12:41:12.259"}}
+Counter value sent = 6
+
+Package received at date - 03/05/2015 and time - 12:41:13.70
+Received IP address and port no.: /192.168.0.7 and 50000
+Counter value received = 7
+JSON Object received = 
+{"counter":7,"timestamp":{"date":"03/05/2015","time":"12:41:13.59"}}
+
+Going to sleep for 800ms now..
+
+Incrementing counter and sending new JSON
+Putting current timestamp and sending out the JSON Object: 
+{"counter":8,"timestamp":{"date":"03/05/2015","time":"12:41:13.871"}}
+Counter value sent = 8
+
+Package received at date - 03/05/2015 and time - 12:41:14.677
+Received IP address and port no.: /192.168.0.7 and 50000
+Counter value received = 9
+JSON Object received = 
+{"counter":9,"timestamp":{"date":"03/05/2015","time":"12:41:14.667"}}
+
+Going to sleep for 800ms now..
+
+Incrementing counter and sending new JSON
+Putting current timestamp and sending out the JSON Object: 
+{"counter":10,"timestamp":{"date":"03/05/2015","time":"12:41:15.478"}}
+Counter value sent = 10
+
+Package received at date - 03/05/2015 and time - 12:41:16.315
+Received IP address and port no.: /192.168.0.7 and 50000
+Counter value received = 11
+JSON Object received = 
+{"counter":11,"timestamp":{"date":"03/05/2015","time":"12:41:16.302"}}
+
+Going to sleep for 800ms now..
+
+Incrementing counter and sending new JSON
+Putting current timestamp and sending out the JSON Object: 
+{"counter":12,"timestamp":{"date":"03/05/2015","time":"12:41:17.133"}}
+Counter value sent = 12
+
+Package received at date - 03/05/2015 and time - 12:41:17.949
+Received IP address and port no.: /192.168.0.7 and 50000
+Counter value received = 13
+JSON Object received = 
+{"counter":13,"timestamp":{"date":"03/05/2015","time":"12:41:17.936"}}
+
+Going to sleep for 800ms now..
+
+Incrementing counter and sending new JSON
+Putting current timestamp and sending out the JSON Object: 
+{"counter":14,"timestamp":{"date":"03/05/2015","time":"12:41:18.750"}}
+Counter value sent = 14
+
+Package received at date - 03/05/2015 and time - 12:41:19.564
+Received IP address and port no.: /192.168.0.7 and 50000
+Counter value received = 15
+JSON Object received = 
+{"counter":15,"timestamp":{"date":"03/05/2015","time":"12:41:19.552"}}
+
+Going to sleep for 800ms now..
+
+Incrementing counter and sending new JSON
+Putting current timestamp and sending out the JSON Object: 
+{"counter":16,"timestamp":{"date":"03/05/2015","time":"12:41:20.365"}}
+Counter value sent = 16
+
+Package received at date - 03/05/2015 and time - 12:41:21.201
+Received IP address and port no.: /192.168.0.7 and 50000
+Counter value received = 17
+JSON Object received = 
+{"counter":17,"timestamp":{"date":"03/05/2015","time":"12:41:21.189"}}
+
+Going to sleep for 800ms now..
+
+Incrementing counter and sending new JSON
+Putting current timestamp and sending out the JSON Object: 
+{"counter":18,"timestamp":{"date":"03/05/2015","time":"12:41:22.2"}}
+Counter value sent = 18
+
+Package received at date - 03/05/2015 and time - 12:41:22.825
+Received IP address and port no.: /192.168.0.7 and 50000
+Counter value received = 19
+JSON Object received = 
+{"counter":19,"timestamp":{"date":"03/05/2015","time":"12:41:22.814"}}
+
+Going to sleep for 800ms now..
+
+Incrementing counter and sending new JSON
+Putting current timestamp and sending out the JSON Object: 
+{"counter":20,"timestamp":{"date":"03/05/2015","time":"12:41:23.626"}}
+Counter value sent = 20
