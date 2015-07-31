@@ -223,7 +223,7 @@ public class Client {
 			try {
 				// input = input_reader.readLine();
 				if (chat_scanner.hasNextLine()) {
-					input = chat_scanner.nextLine();
+					input = chat_scanner.nextLine().trim();
 					// System.out.println("Read a line!");
 					if ((!input.startsWith(" ")) && input.contains(" ")) {
 						index = input.indexOf(' ');
@@ -235,11 +235,6 @@ public class Client {
 					}
 
 					// -----------------------
-					client_Socket = new Socket(server_address, server_port);
-					ObjectOutputStream outgoing = new ObjectOutputStream(
-							client_Socket.getOutputStream());
-					ObjectInputStream incoming = new ObjectInputStream(
-							client_Socket.getInputStream());
 
 					// Read command and act accordingly
 					if ((command.equals("message") || command.equals("private"))
@@ -254,6 +249,12 @@ public class Client {
 						if (command.equals("message")) {
 							// Non-direct case: Routing message through Server
 
+							client_Socket = new Socket(server_address, server_port);
+							ObjectOutputStream outgoing = new ObjectOutputStream(
+									client_Socket.getOutputStream());
+							ObjectInputStream incoming = new ObjectInputStream(
+									client_Socket.getInputStream());
+							
 							outgoing.writeObject(to_Send);
 							received = (Message) incoming.readObject();
 							client_Socket.close();
@@ -262,7 +263,7 @@ public class Client {
 							}
 						} else {
 							// Direct case: Sending directly to recipient
-							client_Socket.close();
+//							client_Socket.close();
 
 							// If empty, ask for getaddress
 							// else, get values from table and send
@@ -276,6 +277,7 @@ public class Client {
 							} else {
 								String peer_IP = friend_record.getIP();
 								int peer_port = friend_record.getPort_number();
+								
 								Socket peer_Socket = new Socket(peer_IP,
 										peer_port);
 								ObjectOutputStream outgoing_peer = new ObjectOutputStream(
@@ -287,34 +289,42 @@ public class Client {
 							}
 							// peer_Socket things
 						}
-
 					} else if (command.equals("broadcast") && !param.isEmpty()) {
 						to_Send = new Message(Message.Type.MESSAGE, param);
 						to_Send.sender = name;
 						to_Send.target = "ALL";
 
+						client_Socket = new Socket(server_address, server_port);
+						ObjectOutputStream outgoing = new ObjectOutputStream(
+								client_Socket.getOutputStream());
+						ObjectInputStream incoming = new ObjectInputStream(
+								client_Socket.getInputStream());
 						outgoing.writeObject(to_Send);
 						received = (Message) incoming.readObject();
 						client_Socket.close();
 						if (received.getType() == Message.Type.ERROR) {
 							System.out.println(received.getValue());
 						}
-
 					} else if (command.equals("getaddress") && !param.isEmpty()) {
 						to_Send = new Message(Message.Type.GET, param);
 						to_Send.sender = name;
 						to_Send.target = param;
 
+						client_Socket = new Socket(server_address, server_port);
+						ObjectOutputStream outgoing = new ObjectOutputStream(
+								client_Socket.getOutputStream());
+						ObjectInputStream incoming = new ObjectInputStream(
+								client_Socket.getInputStream());
 						outgoing.writeObject(to_Send);
 						received = (Message) incoming.readObject();
 						client_Socket.close();
+						
 						if (received.getType() == Message.Type.ERROR) {
 							System.out.println(received.getValue());
 						} else if (received.getType() == Message.Type.OK) {
 							String address = received.getValue();
 							System.out.println("Received address " + address
 									+ " for user " + param);
-
 							index = address.indexOf(' ');
 							String IP_add = address.substring(0, index);
 							String pport = address.substring(index + 1);
@@ -333,6 +343,11 @@ public class Client {
 						to_Send.sender = name;
 						to_Send.target = param;
 
+						client_Socket = new Socket(server_address, server_port);
+						ObjectOutputStream outgoing = new ObjectOutputStream(
+								client_Socket.getOutputStream());
+						ObjectInputStream incoming = new ObjectInputStream(
+								client_Socket.getInputStream());
 						outgoing.writeObject(to_Send);
 						received = (Message) incoming.readObject();
 						client_Socket.close();
@@ -340,12 +355,16 @@ public class Client {
 							System.out.println("User " + param
 									+ " was successfully blocked");
 						}
-
 					} else if (command.equals("unblock")) {
 						to_Send = new Message(Message.Type.BLOCK, "0");
 						to_Send.sender = name;
 						to_Send.target = param;
 
+						client_Socket = new Socket(server_address, server_port);
+						ObjectOutputStream outgoing = new ObjectOutputStream(
+								client_Socket.getOutputStream());
+						ObjectInputStream incoming = new ObjectInputStream(
+								client_Socket.getInputStream());
 						outgoing.writeObject(to_Send);
 						received = (Message) incoming.readObject();
 						client_Socket.close();
@@ -359,6 +378,11 @@ public class Client {
 						to_Send = new Message(Message.Type.LOGOUT);
 						to_Send.sender = name;
 
+						client_Socket = new Socket(server_address, server_port);
+						ObjectOutputStream outgoing = new ObjectOutputStream(
+								client_Socket.getOutputStream());
+						ObjectInputStream incoming = new ObjectInputStream(
+								client_Socket.getInputStream());
 						outgoing.writeObject(to_Send);
 						client_Socket.close();
 						chatting = false;
